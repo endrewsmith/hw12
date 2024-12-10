@@ -32,7 +32,9 @@ public class HomeWork {
         for (int i = 0; i < n; ++i) {
             String data = br.readLine();
             out.write(String.valueOf(min(data)).getBytes());
-            out.write(("\n").getBytes());
+            // В одной idea на одном ПК требовал \r, на другом нет,
+            // оставил, но если не проходит тест, то можно убрать, тогда пройдет
+            out.write(("\r\n").getBytes());
         }
     }
 
